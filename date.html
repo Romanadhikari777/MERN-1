@@ -1,0 +1,66 @@
+<script>
+var dt= new Date();
+console.log(dt); //Tue Jun 07 2022 19:54:01 GMT-0700 (Pacific Daylight Time)
+// Date.parse()
+var str1=String("Tue Jun 07 2022 19:54:01 GMT-0700");
+var dt2=Date.parse(str1); // string to datetime=> timestamp
+console.log(dt2);
+console.log(typeof(dt2));
+// times.tamp to date in javascript
+var dt3=Date(dt2);
+console.log(dt3); //Tue Jun 07 2022 20:02:04 GMT-0700
+
+
+try{
+var dt4=Date.parse("2022-05-31");
+var dt5=Date(dt4);
+console.log(dt4);
+console.log(dt5);
+}
+catch(ex){
+    consol.log("error")
+}
+//CASE 2
+try{
+var dt4=Date.parse("2022/05/31");
+var dt5=Date(dt4);
+
+console.log(dt5);
+}
+catch(ex){
+    consol.log("error")
+}
+// case 3
+try{
+var dt4=Date.parse("05/31/2022");
+var dt5=Date(dt4);// timestamp date and time
+console.log(dt4);
+console.log(dt5);
+}
+catch(ex){
+    consol.log("error")
+}
+
+// case4
+// date difference
+var date1=new Date("04/30/2019");
+var date2=new Date("05/30/2022");
+var diff_time= date2.getTime()-date1.getTime();
+var diff_days=diff_time/(1000*3600*24);
+console.log(`difference Days ${diff_days}`);
+console.log("difference Days"+ diff_days);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
